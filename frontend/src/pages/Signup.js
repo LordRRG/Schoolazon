@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import api from '../api';
 
 export default function Signup({ setToken }){
-  const [name,setName]=useState(''); const [email,setEmail]=useState(''); const [password,setPassword]=useState('');
+  const [name,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
+  // ...existing code...
   const [msg,setMsg]=useState('');
+
+  // ...existing code...
+
   const submit = async (e)=>{
     e.preventDefault();
     try{
@@ -17,6 +23,7 @@ export default function Signup({ setToken }){
         <div className="card-body">
           <h3 className="card-title mb-3">Signup</h3>
           <form onSubmit={submit}>
+            {/* ...existing code... */}
             <div className="mb-3">
               <input
                 className="form-control"
